@@ -46,8 +46,6 @@ jobs:
       - name: Build and Push to DockerHub
         uses: docker/build-push-action@v3
         with:
-          run: | 
-              ls -a
           context: .
           file: FrontEnd/Dockerfile
           push: true
