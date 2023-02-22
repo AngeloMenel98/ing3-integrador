@@ -40,7 +40,6 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v2
         with:
-          run: ls -a
           username: '${{ secrets.DOCKER_USER }}'
           password: '${{ secrets.DOCKER_PSW }}'
 
@@ -48,8 +47,9 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
+          file: FrontEnd/Dockerfile
           push: true
-          tags: angemenel98/frontend-is3:${{ github.run_number }}
+          tags: ${{ secrets.DOCKER_USER }}/frontend-is3:${{ github.run_number }}
 
   deploy-to-railway:
     runs-on: ubuntu-latest
