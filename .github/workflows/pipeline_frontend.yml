@@ -23,11 +23,11 @@ jobs:
           node-version: 19.x
 
       - name: Install packages
-        working-directory: ing3-integrador/FrontEnd
+        working-directory: ./FrontEnd
         run: npm i 
         
       - name: Run Test
-        working-directory: ing3-integrador/FrontEnd
+        working-directory: ./FrontEnd
         run: npm run test
 
   build-docker-image:
