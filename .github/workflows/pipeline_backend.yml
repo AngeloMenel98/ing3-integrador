@@ -90,5 +90,5 @@ jobs:
         run: npm i
 
       - name: Run Integration Test and Report
-        working-directory: ./ing3-integrador
+        working-directory: ./Integration
         run: TESTOMATIO=${{secrets.TESTTOMAT_API_KEY}} npx codeceptjs run
