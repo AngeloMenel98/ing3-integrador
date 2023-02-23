@@ -40,7 +40,8 @@ jobs:
       - name: Build and Push to DockerHub
         uses: docker/build-push-action@v3
         with:
-          context: BackEnd/Dockerfile
+          context: .
+          file: BackEnd/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USER }}/backend-is3:${{ github.run_number }}
 
