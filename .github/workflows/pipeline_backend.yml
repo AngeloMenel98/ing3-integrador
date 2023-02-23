@@ -65,7 +65,8 @@ jobs:
         run: npm i -g @railway/cli
 
       - name: Deploy
-        run: railway up -s backend
+        working-directory: ./BackEnd
+        run: railway up -s backend-is3
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
