@@ -1,7 +1,7 @@
 FROM node:19-alpine3.15 as build
 RUN apk update
 WORKDIR /FrontEnd
-RUN echo $(ls -1)
+RUN echo $(ls -1 /)
 COPY . .
 RUN npm i
 ARG REACT_APP_BACK_URL
