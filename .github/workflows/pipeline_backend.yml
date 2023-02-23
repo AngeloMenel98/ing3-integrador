@@ -19,7 +19,6 @@ jobs:
 
       - name: Install packages
         run: npm i
-             npm ci --include=dev
 
   build-docker-image:
     runs-on: ubuntu-latest
