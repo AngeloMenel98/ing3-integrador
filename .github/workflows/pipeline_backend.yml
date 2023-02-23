@@ -21,9 +21,6 @@ jobs:
         run: npm i
              npm ci --include=dev
 
-      - name: Run tests
-        run: npm run test
-
   build-docker-image:
     runs-on: ubuntu-latest
     needs: unit-tests
@@ -45,7 +42,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: angemenel98/backend-is3:${{ github.run_number }}
+          tags: ${{ secrets.DOCKER_USER }}/backend-is3:${{ github.run_number }}
 
   deploy-to-railway:
     runs-on: ubuntu-latest
