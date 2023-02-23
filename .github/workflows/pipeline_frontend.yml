@@ -91,7 +91,7 @@ jobs:
           node-version: 19.x
 
       - name: Install packages
-        working-directory: ./Integration
+        working-directory: /Integration
         run: npm i
 
       - name: Run Integration Test and Report
