@@ -2,7 +2,11 @@ FROM node:19-alpine3.15 as build
 RUN apk update
 WORKDIR /app
 COPY . /app
-RUN npm ci
+RUN echo "PATH"
+RUN echo $(ls -1 /)
+RUN echo "APP"
+RUN echo $(ls -1 /app)
+RUN npm i
 ARG REACT_APP_BACK_URL
 RUN npm run build
 
