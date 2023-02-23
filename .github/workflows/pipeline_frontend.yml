@@ -23,8 +23,7 @@ jobs:
         with:
           node-version: 19.x
 
-      - name: Install package
-        working-directory: /FrontEnd
+      - name: Install packages
         run: npm i
         
       - name: Run Test
