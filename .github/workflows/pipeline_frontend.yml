@@ -50,7 +50,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: FrontEnd/Dockerfile
+          file: FrontEnd/dockerfile/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USER }}/frontend-is3:${{ github.run_number }}
 
@@ -70,7 +70,7 @@ jobs:
         run: npm i -g @railway/cli
 
       - name: Deploy
-        working-directory: ./FrontEnd/Railwayfile
+        working-directory: ./FrontEnd
         run: railway up -s frontend-is3 
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
