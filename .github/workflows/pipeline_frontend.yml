@@ -24,8 +24,12 @@ jobs:
           node-version: 19.x
 
       - name: Install package
-        run: npm i 
-             npm ci --include=dev
+        working-directory: /FrontEnd
+        run: npm i
+        
+      - name: Run Test
+        working-directory: /FrontEnd
+        run: npm run test
 
   build-docker-image:
     runs-on: ubuntu-latest
