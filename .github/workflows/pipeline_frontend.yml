@@ -24,7 +24,7 @@ jobs:
           node-version: 19.x
 
       - name: Install packages
-        run: npm i
+        run: npm ci --include=dev
         
       - name: Run Test
         working-directory: /FrontEnd
