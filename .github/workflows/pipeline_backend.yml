@@ -18,7 +18,12 @@ jobs:
           node-version: 19.x
 
       - name: Install packages
+        working-directory: ./BackEnd
         run: npm i
+      
+      - name: Run Tests
+        working-directory: ./BackEnd
+        run: npm run test
 
   build-docker-image:
     runs-on: ubuntu-latest
