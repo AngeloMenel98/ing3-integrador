@@ -44,9 +44,9 @@ function App() {
       {/* Este botón es para facilitar probar que los cambios pasan los pipelines */}
       <Button id= "btn-sum2" className="custom-btn btn-8 " onClick = {incrementar} value="Incrementar" />
       
-      <Button id="btn-sum" className="custom-btn btn-3" onClick = {incrementar} value="Incrementar" /> 
-      <Button id="btn-sub" className="custom-btn btn-7" onClick = {decrementar} value= "Decrementar" />
-      <Button id="btn-restart" className="custom-btn btn-5" onClick = {reiniciar} value="Reiniciar" />
+      <Button id="btn-sum" className="custom-btn btn-3 contador btn-sum" onClick = {incrementar} value="Incrementar" /> 
+      <Button id="btn-sub" className="custom-btn btn-7 btn-sub" onClick = {decrementar} value= "Decrementar" />
+      <Button id="btn-restart" className="custom-btn btn-5 btn-restart" onClick = {reiniciar} value="Reiniciar" />
       </div>
     </div>
   );
