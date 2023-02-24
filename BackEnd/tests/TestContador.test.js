@@ -10,7 +10,7 @@ test('suma 1 al número actual', () => {
 
 test('resta 1 al número actual', () => {
     let count = 0;
-    expect(sub(count)).toBe(5);
+    expect(sub(count)).toBe(-1);
 })
 
 test('vuelve a 0 el contador', () => {
