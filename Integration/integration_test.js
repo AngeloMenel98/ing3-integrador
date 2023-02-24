@@ -11,15 +11,15 @@ Scenario('Checking if Backend is already up', async () =>{
 
 Scenario('Checking Contador Render',async () => {
     I.amOnPage('https://frontend-production-0c0f.up.railway.app/');
-    I.see('Contador', {css: '#contador'});
+    I.see('Contador', {css: '.contador'});
 })
 
 Scenario('Checking Buttons Render', async () => {
     I.amOnPage('https://frontend-production-0c0f.up.railway.app/');
 
-    I.see('Incrementar', {css: '#btn-sum'});
-    I.see('Decrementar', {css: '#btn-sub'});
-    I.see('Reiniciar', {css: '#btn-restart'});
+    I.see('Incrementar', {css: '.btn-sum'});
+    I.see('Decrementar', {css: '.btn-sub'});
+    I.see('Reiniciar', {css: '.btn-restart'});
 })
 
 Scenario('Checking Buttons Behaviour and Backend response', async () => {
